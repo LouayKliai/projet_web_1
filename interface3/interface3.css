@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 6px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 35px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold 10px;
+}
+
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.icon-image {
+    width: 24px; /* Adjust size */
+    height: 24px; /* Adjust size */
+    object-fit: contain; /* Ensures image scales nicely */
+}
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+   
+}
+
+.product-image img {
+    width: 500px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
+.product-details {
+    margin-left: 30px;
+}
+
+.product-details h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.protection-options {
+    margin-bottom: 20px;
+}
+
+.protection-options p {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: black;
+    font-weight: bold;
+}
+.high {
+    color: #e60023;
+    text-decoration: underline;
+}
+.options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.option {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.option:hover {
+    background: #eee;
+}
+
+.add-to-cart {
+    width: 59%;
+    padding: 12px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.add-to-cart:hover {
+    background: #333;
+}
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.back-button:hover {
+    background-color: #218838;
+}

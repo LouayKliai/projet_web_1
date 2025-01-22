@@ -1,0 +1,231 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}   
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center content vertically */
+    padding: 10px 20px; /* Spacing inside the navbar */
+    background: linear-gradient(to right,#801e9e,#db2332);
+    color: white; /* Text color */
+  }
+  
+  
+  /* Styling for the navigation links */
+  .nav-primary,
+  .nav-secondary {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .nav-links li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    font-size: 1em;
+    transition: color 0.3s; /* Smooth hover effect */
+  }
+  
+  .nav-links li a:hover {
+    color: #f39c12; /* Change color on hover */
+  }
+  /* Styling for the main page */
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    }   
+  .bookingText{
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    color: #4B0082; /* Couleur violette pour la ville */
+    margin: 0 5px;
+  }
+
+  .dropdown select {
+    appearance: none; /* Supprime le style natif */
+    -webkit-appearance: none; /* Compatibilité Safari */
+    -moz-appearance: none; /* Compatibilité Firefox */
+    background: none;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .dropdown::after {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    pointer-events: none;
+    color: inherit;
+  }
+  /*Cards part*/
+  .articles {
+    display: grid;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  .prohete{
+    color: #e00de7;
+    font-size: large;
+  }
+  article {
+    --img-scale: 1.001;
+    --title-color: black;
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    position: relative;
+    border-radius: 16px;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+  }
+  
+  article a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+  }
+  
+  /* basic article elements styling */
+  article h2 {
+    margin: 0 0 18px 0;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.9rem;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
+  }
+  
+  figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  article img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .article-body {
+    padding: 24px;
+  }
+  
+  article a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #28666e;
+  }
+  
+  article a:focus {
+    outline: 1px dotted #28666e;
+  }
+  
+  article a .icon {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
+  }
+  .footer{
+    background-color: #cfd2d3;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .first{
+   align-self: center;
+
+  }
+  .second img {
+    width: 60%;
+    /* height: auto; */
+    height: 400px;
+}
+.third{
+  align-self: center;
+}
+  
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+.back-button:hover {
+  background-color: #218838;
+}
+
+  /* using the has() relational pseudo selector to update our custom properties */
+  article:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #28666e;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+/**/  
+  /* Responsive design for smaller screens */
+  @media screen and (max-width: 768px) {
+    .nav-primary, .nav-secondary {
+      display: none; /* Hide links */
+    }
+  
+    .nav-links.active {
+      display: flex; /* Show links when active */
+      flex-direction: column; /* Vertical layout for links */
+      background-color: #333; /* Background for dropdown */
+      position: absolute; /* Position relative to navbar */
+      top: 60px; /* Below the navbar */
+      right: 0;
+      width: 200px; /* Dropdown width */
+      text-align: center;
+    }
+
+  }
+  

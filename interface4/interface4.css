@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 2px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 80px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold 10px;
+}
+
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.icon-image {
+    width: 24px; /* Adjust size */
+    height: 24px; /* Adjust size */
+    object-fit: contain; /* Ensures image scales nicely */
+}
+.icons a{
+    text-decoration: underline;
+    color: #000;
+}
+  .product-page {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .gallery {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+  }
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .installments {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .installments button{
+    background-color: rgb(226, 180, 180);
+    font-weight: bold;
+    border-color: transparent;
+    border-radius: 2px;
+    margin-left: 235px;
+    cursor: pointer;
+  }
+  
+  .color-options, .size-options {
+    margin-bottom: 20px;
+  }
+  
+  .color {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .color.black {
+    background-color: #000;
+  }
+  
+  .color.dark-blue {
+    background-color: #002244;
+  }
+  
+  .size-options button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .size-options a{
+    color: black;
+    text-decoration: underline;
+    margin-left: 99px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 10px; /* Espacement entre l'image et le texte */
+  }
+  
+  .imagefit {
+    width: 50px; /* Ajustez la taille de l'image selon vos besoins */
+    height: auto;
+  }
+  
+  .text-container {
+    display: flex; /* Active le mode flexbox pour aligner les éléments horizontalement */
+    gap: 12px; /* Ajoute de l'espacement entre les deux éléments */
+  }
+  
+  .fit {
+    font-weight: bold;
+    font-size: 30px;
+    color: #eb7777; /* Exemple de style pour différencier */
+  }
+  
+  .finder {
+    color: black; 
+    transform: translateY(10px);
+  }
+  .add-to-cart {
+    display: block;
+    margin-top: 20px;
+    padding: 20px 270px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .add-to-cart {
+    background-color: #000;
+  }
+  .back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.back-button:hover {
+    background-color: #218838;
+}

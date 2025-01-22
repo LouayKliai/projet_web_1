@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Frank And Oak</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Information</a></li>
+                    <li>               
+                        <a href="#">Shipping</a></li>
+                    <li>
+                        <a href="#">Payment</a></li>
+                </ul>
+            </nav>
+            <div class="payment-block">
+                <h2>Express Checkout</h2>
+            <div class="Express">
+                <button class="express-btn s">
+                    <img src="shop.png" alt="ShopPay Logo"> ShopPay
+                </button>
+                <button class="express-btn p">
+                    <img src="paypal.png" alt="PayPal Logo"> PayPal
+                </button>
+                <button class="express-btn g">
+                    <img src="googlee.png" alt="Google Pay Logo"> Google Pay
+                </button>
+            </div>
+            </div>
+        <div class="or-container">
+            <hr class="line">
+            <span class="or-text">OR</span>
+            <hr class="line">
+        </div>
+            <form>
+                <div class="contact">
+                    <label for="email">Contact information</label>
+                    <p><a href="#">Already have an account?</a></p>
+                </div>
+                <input type="email" id="email" placeholder="Email">
+                
+                <div class="newsletter">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">Email me with news and offers</label>
+                </div>
+                
+                <label for="country">Shipping address</label>
+                <select id="country">
+                    <option>United States</option>
+                    <option>Canada</option>
+                </select>
+            </form>
+        </div>
+        <div class="right-section">
+            <div class="item">
+                <img src="images.jpg" alt="Jacket">
+                <div>
+                    <p>The Skyline Reversible Collared Jacket in Dark Blue</p>
+                    <p>Taille:M</p>
+                    <p>Price :$169.00</p>
+                </div>
+            </div>
+            <div class="discount">
+                <input type="text" placeholder="Gift card or discount code">
+                <button>Apply</button>
+                <hr>
+            </div>
+            <div class="price">
+                <p>Subtotal: <span>$169.00</span></p>
+                <p>Shipping: <span>Calculated at next step</span></p>
+                <hr>
+                <p>Total: <span>USD $169.00</span></p>
+            </div>
+        </div>
+    </div>
+    <a href="../index2.html"><button class="back-button">Retour</button></a>
+</body>
+</html>
